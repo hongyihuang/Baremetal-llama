@@ -6,7 +6,9 @@ extern "C" {
 #endif
 
 
-#include "examplechip.h"
+// #include "bearlyml23.h"
+#include "robo23.h"
+// Todo: use https://github.com/ucb-bar/Baremetal-IDE-bsp/tree/chip23 instead of current generic bsp pointer
 
 /**
  * This section controls which peripheral device is included in the application program.

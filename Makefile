@@ -6,7 +6,7 @@
 
 TARGET ?= firmware
 
-CHIP ?= examplechip
+CHIP ?= robo23
 
 #################################
 # RISCV Toolchain
@@ -101,11 +101,12 @@ ARCH = rv64imafdc
 ABI = lp64d
 CODEMODEL = medany
 
-ifeq ($(USE_HTIF), 1)
-LD_SCRIPT = $(USR_DIR)examplechip_htif_large.ld
-else
-LD_SCRIPT = $(USR_DIR)examplechip_large.ld
-endif
+#ifeq ($(USE_HTIF), 1)
+#LD_SCRIPT = $(USR_DIR)examplechip_htif_large.ld
+#else
+#LD_SCRIPT = $(USR_DIR)examplechip_large.ld
+#endif
+LD_SCRIPT = $(USR_DIR)chips23.ld
 
 # -mcmodel=medany -Wl,--start-group -lc_nano -lgloss_htif -Wl,--end-group -lgcc -static -nostartfiles -dT htif.ld
 SPECFLAGS = --specs="nano.specs"
